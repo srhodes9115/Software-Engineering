@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Time Entry</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body bgcolor="teal">
+
+        <div><font size = 7> Welcome to the Time-Entry System</font><br></div>
+
+        <form action="InformationDisplay" method ="get">
+            CDID: <input type="text" name ="cdidId"><br>
+            <div>Are you a Project Manager? 
+                <select name ="projectManager">
+                    <option value="nothing"></option>
+                    <option value="yesManager">Yes</option>
+                    <option value="noManager">No</option>
+                </select></div>
+            <br>MANAGER: <br>
+            Employee CDID for Log: <input type ="text" name ="employeeCdid"><br>
+            Project ID for Log: <input type ="number" name ="projectLog"><br>
+            TO CREATE A NEW PROJECT: <br>
+            Project Name: <input type ="text" name ="projectName"><br>
+            <br>EMPLOYEE: <br>
+            Are you entering Time?
+            If not, after selecting no: push submit
+            <div><select name = createNew>
+                    <option value="nothing"></option>
+                    <option value="yesNew">yes</option>
+                    <option value="noNew">no</option>
+                </select></div>
+            <b>New Log:</b><br>
+            Project Id: <input type ="number" name ="projectId"><br>
+            Number of hours: <input type ="number" name="hours" min="1" max = "10"><br>
+            Date of work: <input type ="date" name ="workDate" min ="1985-05-24" max="2014-06-14"><br>
+            <div> Select the type of work you are logging
+                <select name = typeOfWork>
+                    <option value="nothing"></option>
+                    <option value="requirement">Requirements</option>
+                    <option value="development">Development</option>
+                    <option value="testing">Testing</option>
+                </select></div>
+            <input type="submit" value="submit"><br>
+        </form>
+        <script>
+            function dateFunction() {
+                d.getFullYear();
+                document.getElementsByName("max").innerHTML = Date();
+            }
+        </script>
+    </body>
+</html>
